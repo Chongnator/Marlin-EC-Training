@@ -34,8 +34,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: List dist contents
+        run: |
+          echo "Contents of dist directory:"
+          ls -laR dist/
         
       - name: Fix permissions
         run: |
@@ -43,10 +45,13 @@ jobs:
             echo "::warning title=Invalid file permissions automatically fixed::$line"
           done
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: 'dist'
 
   deploy:
     environment:
