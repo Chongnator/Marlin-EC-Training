@@ -19,22 +19,18 @@ function Workbook({ onNavigate }) {
             practice workbook where you can do so, along with a video explaining the solution 
             and walking through how to iterate on CI feedback.
           </p>
-        </div>
-        
-        <div className="workbook-resources">
-          <div className="download-card">
-            <div className="download-icon">📓</div>
-            <h3>CI Feedback Training Notebook</h3>
-            <p>Download the Jupyter notebook for hands-on practice with CI feedback training</p>
+          <p>
             <a 
               href="/Terminus-EC-Training/ci_feedback_training.ipynb" 
               download="ci_feedback_training.ipynb"
-              className="download-button"
+              className="notebook-download-link"
             >
-              Download Notebook
+              📓 Download CI Feedback Training Notebook
             </a>
-          </div>
-          
+          </p>
+        </div>
+        
+        <div className="workbook-video-section">
           <div className="video-card">
             <h3 className="video-card-title">CI Feedback Training Tutorial</h3>
             <div className="video-wrapper">

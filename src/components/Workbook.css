@@ -65,7 +65,32 @@
   font-size: 1.125rem;
   color: #475569;
   line-height: 1.7;
-  margin: 0;
+  margin: 0 0 1rem 0;
+}
+
+.workbook-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.notebook-download-link {
+  display: inline-block;
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.125rem;
+  transition: color 0.3s;
+}
+
+.notebook-download-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Video Section */
+.workbook-video-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 /* Resources Section - Side by Side */
@@ -134,7 +159,9 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .video-card-title {
