@@ -22,7 +22,7 @@ function Workbook({ onNavigate }) {
             <h3>CI Feedback Training Notebook</h3>
             <p>Download the Jupyter notebook for hands-on practice with CI feedback training</p>
             <a 
-              href="/ci_feedback_training.ipynb" 
+              href="/Terminus-EC-Training/ci_feedback_training.ipynb" 
               download="ci_feedback_training.ipynb"
               className="download-button"
             >

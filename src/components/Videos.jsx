@@ -18,6 +18,10 @@ function Videos({ onNavigate }) {
       id: 'a00541ff2787464c84bf4601415ee624',
       title: '4. Creating tests for your task',
     },
+    {
+      id: '72b70216a5314068823bc6ed0350e672',
+      title: '5. Additional Tutorial',
+    },
   ];
 
   return (
