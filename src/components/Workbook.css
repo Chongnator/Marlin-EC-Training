@@ -235,6 +235,22 @@
   padding: 0.75rem 1rem;
   text-align: left;
   border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.workbook-checks-section th:first-child,
+.workbook-checks-section td:first-child {
+  min-width: 200px;
+}
+
+.workbook-checks-section th:nth-child(2),
+.workbook-checks-section td:nth-child(2) {
+  min-width: 250px;
+}
+
+.workbook-checks-section th:nth-child(3),
+.workbook-checks-section td:nth-child(3) {
+  min-width: 300px;
 }
 
 .workbook-checks-section th {
@@ -291,6 +307,38 @@
 
   .download-card {
     padding: 1.5rem;
+  }
+
+  .workbook-checks-section {
+    padding: 0 1rem;
+  }
+
+  .workbook-checks-section table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .workbook-checks-section th,
+  .workbook-checks-section td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .workbook-checks-section th:first-child,
+  .workbook-checks-section td:first-child {
+    min-width: 150px;
+  }
+
+  .workbook-checks-section th:nth-child(2),
+  .workbook-checks-section td:nth-child(2) {
+    min-width: 200px;
+  }
+
+  .workbook-checks-section th:nth-child(3),
+  .workbook-checks-section td:nth-child(3) {
+    min-width: 250px;
+    white-space: normal;
   }
 }
 
