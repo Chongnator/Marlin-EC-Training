@@ -19,9 +19,6 @@ function LandingPage({ onNavigate }) {
         </section>
 
         <section className="overview-section">
-          <h2>Terminus Overview</h2>
-          <p className="version-info">Version 1.0 (Last updated: Oct 23, 2025)</p>
-          
           <h3>Project Goal</h3>
           <p>
             This project aims to develop a high-quality dataset in the style of Terminal-Bench. 
