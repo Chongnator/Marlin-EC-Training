@@ -6,6 +6,7 @@ import Videos from './components/Videos';
 import Workbook from './components/Workbook';
 import OracleTraining from './components/OracleTraining';
 import OnboardingMaterials from './components/OnboardingMaterials';
+import FeedbackSlides from './components/FeedbackSlides';
 import { trainingSections } from './data/trainingData';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       {currentView === 'workbook' && <Workbook onNavigate={handleNavigate} />}
       {currentView === 'oracle' && <OracleTraining onNavigate={handleNavigate} />}
       {currentView === 'onboarding' && <OnboardingMaterials onNavigate={handleNavigate} />}
+      {currentView === 'feedback' && <FeedbackSlides onNavigate={handleNavigate} />}
     </div>
   );
 }

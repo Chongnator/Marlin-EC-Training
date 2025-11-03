@@ -66,6 +66,10 @@ function LandingPage({ onNavigate }) {
               <span className="button-text">Onboarding Materials</span>
               <span className="button-description">Access the onboarding presentation slides and video</span>
             </button>
+            <button className="resource-button" onClick={() => onNavigate('feedback')}>
+              <span className="button-text">Feedback Slides</span>
+              <span className="button-description">View feedback presentation slides with common issues and best practices</span>
+            </button>
           </div>
         </section>
 
