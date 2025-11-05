@@ -55,11 +55,11 @@ function LandingPage({ onNavigate }) {
               <span className="button-description">Walks through the process of creating a task, running it, and creating a solution and tests</span>
             </button>
             <button className="resource-button" onClick={() => onNavigate('workbook')}>
-              <span className="button-text">CI Feedback Training</span>
+              <span className="button-text">CI Feedback Video and Notebook</span>
               <span className="button-description">Covers how to effectively utilize feedback from CI checks to iterate on submissions</span>
             </button>
             <button className="resource-button" onClick={() => onNavigate('oracle')}>
-              <span className="button-text">Oracle Training</span>
+              <span className="button-text">Oracle Training Video and Notebook</span>
               <span className="button-description">Covers how to run the Oracle Agent and debug any issues</span>
             </button>
             <button className="resource-button" onClick={() => onNavigate('onboarding')}>

@@ -7,11 +7,11 @@ function Workbook({ onNavigate }) {
         <button className="back-button" onClick={() => onNavigate('home')}>
           ← Back to Home
         </button>
-        <div className="workbook-logo">CI Feedback Training</div>
+        <div className="workbook-logo">CI Feedback Video and Notebook</div>
       </header>
       
       <main className="workbook-content">
-        <h1 className="workbook-title">CI Feedback Training</h1>
+        <h1 className="workbook-title">CI Feedback Video and Notebook</h1>
         <div className="workbook-intro">
           <p>
             CI checks are programmatic evaluations of task correctness and completeness. 
@@ -32,7 +32,7 @@ function Workbook({ onNavigate }) {
         
         <div className="workbook-video-section">
           <div className="video-card">
-            <h3 className="video-card-title">CI Feedback Training Tutorial</h3>
+            <h3 className="video-card-title">CI Feedback Tutorial</h3>
             <div className="video-wrapper">
               <iframe
                 src="https://www.loom.com/embed/db35a5b03c1c43ab80f46f481fa02be1?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"

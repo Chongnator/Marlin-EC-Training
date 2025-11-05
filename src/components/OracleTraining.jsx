@@ -8,11 +8,11 @@ function OracleTraining({ onNavigate }) {
         <button className="back-button" onClick={() => onNavigate('home')}>
           ← Back to Home
         </button>
-        <div className="videos-logo">Oracle Training</div>
+        <div className="videos-logo">Oracle Training Video and Notebook</div>
       </header>
       
       <main className="videos-content">
-        <h1 className="videos-title">Oracle Training</h1>
+        <h1 className="videos-title">Oracle Training Video and Notebook</h1>
         <div className="workbook-intro">
           <p>
             This page covers what the Oracle Agent is, how to run it, how to debug its output, 
