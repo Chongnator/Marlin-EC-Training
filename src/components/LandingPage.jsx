@@ -20,17 +20,10 @@ function LandingPage({ onNavigate }) {
         </section>
 
         <section className="overview-section">
-          <h3>Project Goal</h3>
           <p>
             This project aims to develop a high-quality dataset in the style of Terminal-Bench. 
             Terminal-Bench is a suite of multi-step agentic tasks executed in a Command-Line Interface (CLI) 
-            environment, designed to benchmark the performance of models. You will design these tasks and 
-            include the necessary components to be compatible with the Terminus framework.
-          </p>
-
-          <h3>Your Role as a Coding Expert</h3>
-          <p>
-            Your role is to develop a task, solution, and associated tests to verify the solution. These 
+            environment, designed to benchmark the performance of models. Your role is to develop a task, solution, and associated tests to verify the solution. These 
             should be quite difficult, targeting an accuracy of below 80% for GPT-5 or Sonnet 4.5.
           </p>
           
