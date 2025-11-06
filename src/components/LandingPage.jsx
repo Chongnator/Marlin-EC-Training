@@ -64,7 +64,7 @@ function LandingPage({ onNavigate }) {
         <section className="resources-section">
           <h2 className="section-title">Training Resources</h2>
           <p style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 2rem', color: '#475569', lineHeight: '1.6' }}>
-            Start with the onboarding video and slides, then look at the task walkthrough videos, then OracleAgent, then CI feedback, then local testing info. Then if you'd like you can view the feedback session videos to get info on common mistakes and things to avoid.
+            We recommend completing the training resources in the following order: begin with the onboarding materials to get oriented with the project, then proceed through the task walkthrough videos to understand the development process. Next, complete the OracleAgent training to learn how to validate your solutions, followed by the CI Feedback training to learn how to iterate on submissions. Finally, review the local testing information to set up agent testing. Additionally, you may find the feedback session slides helpful for understanding common mistakes and best practices to avoid.
           </p>
           <div className="resource-buttons">
             <button className="resource-button" onClick={() => onNavigate('onboarding')}>
