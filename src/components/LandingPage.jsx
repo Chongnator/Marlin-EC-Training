@@ -16,7 +16,7 @@ function LandingPage({ onNavigate }) {
       </header>
 
       <div className="announcement-banner">
-        <p className="announcement-text">IMPORTANT: PLEASE DO NOT DELETE REVIEWER COMMENTS ON YOUR PR</p>
+        <p className="announcement-text">Please do not reach out to reviewers directly. Reviews will be performed ASAP and messaging them will not increase the speed at which your submission is reviewed.</p>
       </div>
 
       <main className="main-content">
