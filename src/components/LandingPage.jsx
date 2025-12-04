@@ -21,6 +21,94 @@ function CollapsiblePhase({ title, children, defaultOpen = false }) {
   );
 }
 
+function ProtectedVideo({ src, password }) {
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [inputPassword, setInputPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleUnlock = (e) => {
+    e.preventDefault();
+    if (inputPassword === password) {
+      setIsUnlocked(true);
+      setError('');
+    } else {
+      setError('Incorrect password');
+    }
+  };
+
+  if (!isUnlocked) {
+    return (
+      <div style={{
+        background: '#1e293b',
+        borderRadius: '8px',
+        padding: '2rem',
+        textAlign: 'center'
+      }}>
+        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🔒</div>
+        <p style={{ color: '#ffffff', marginBottom: '1rem', fontWeight: 500 }}>
+          This video is password protected
+        </p>
+        {error && (
+          <p style={{ color: '#f87171', marginBottom: '1rem', fontSize: '0.9rem' }}>
+            {error}
+          </p>
+        )}
+        <form onSubmit={handleUnlock} style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', maxWidth: '250px', margin: '0 auto' }}>
+          <input
+            type="password"
+            value={inputPassword}
+            onChange={(e) => setInputPassword(e.target.value)}
+            placeholder="Enter password"
+            style={{
+              padding: '0.75rem',
+              borderRadius: '6px',
+              border: 'none',
+              fontSize: '1rem',
+              textAlign: 'center'
+            }}
+          />
+          <button
+            type="submit"
+            style={{
+              padding: '0.75rem',
+              borderRadius: '6px',
+              border: 'none',
+              background: '#3b82f6',
+              color: '#ffffff',
+              fontWeight: 600,
+              cursor: 'pointer',
+              fontSize: '1rem'
+            }}
+          >
+            Unlock Video
+          </button>
+        </form>
+      </div>
+    );
+  }
+
+  return (
+    <div className="video-wrapper">
+      <video
+        controls
+        preload="metadata"
+        className="video-iframe"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'contain'
+        }}
+      >
+        <source src={src} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
+}
+
 function LandingPage({ onNavigate }) {
   return (
     <div className="landing-page">
@@ -216,7 +304,7 @@ function LandingPage({ onNavigate }) {
                         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.2)'
                       }}
                     >
-                      ViewPhase 3 & 4 Guidelines
+                      View Phase 3 & 4 Guidelines
                     </a>
                   </div>
 
@@ -224,24 +312,10 @@ function LandingPage({ onNavigate }) {
                     <h4 style={{ fontSize: '1.125rem', fontWeight: 600, color: '#ffffff', marginBottom: '1rem', textAlign: 'center' }}>
                       Onboarding Video
                     </h4>
-                    <div className="video-wrapper">
-                      <video
-                        controls
-                        preload="metadata"
-                        className="video-iframe"
-                        style={{
-                          position: 'absolute',
-                          top: 0,
-                          left: 0,
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'contain'
-                        }}
-                      >
-                        <source src="/Marlin-EC-Training/platform_onboarding_11-25-2025.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
+                    <ProtectedVideo 
+                      src="/media/videos/GMT20251204-220142_Recording.cutfile.20251204223140071_1832x982.mp4"
+                      password="8bMf%@X+"
+                    />
                   </div>
                 </div>
               </div>
