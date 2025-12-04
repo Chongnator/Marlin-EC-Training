@@ -312,8 +312,8 @@ function LandingPage({ onNavigate }) {
                     <h4 style={{ fontSize: '1.125rem', fontWeight: 600, color: '#ffffff', marginBottom: '1rem', textAlign: 'center' }}>
                       Onboarding Video - check #ec-marlin-support-v2 for the password
                     </h4>
-            <ProtectedVideo 
-  src="public/media/videos/turorial one.mp4"
+         <ProtectedVideo 
+  src={import.meta.env.BASE_URL + "media/videos/tutorial-one.mp4"}
   password="8bMf%@X+"
 />
                   </div>
