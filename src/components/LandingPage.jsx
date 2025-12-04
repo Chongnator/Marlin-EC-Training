@@ -313,7 +313,7 @@ function LandingPage({ onNavigate }) {
                       Onboarding Video - check #ec-marlin-support-v2 for the password
                     </h4>
             <ProtectedVideo 
-  src="/Marlin-EC-Training/media/videos/GMT20251204-220142_Recording.cutfile.20251204223140071_1832x982.mp4"
+  src="public/media/videos/turorial one.mp4"
   password="8bMf%@X+"
 />
                   </div>
