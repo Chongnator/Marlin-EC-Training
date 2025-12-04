@@ -13,75 +13,107 @@ function FAQ({ onNavigate }) {
       <main className="videos-content">
         <h1 className="videos-title">Frequently Asked Questions</h1>
         <div className="faq-container">
+          
+          {/* Getting Started */}
+          <h2 className="faq-section-title">Getting Started</h2>
+          
           <div className="faq-item">
-            <h2 className="faq-question">1. Do I need to attend onboarding to get started?</h2>
-            <p className="faq-answer">No, you do not need to attend a live onboarding. We encourage this so that you can ask questions and they're scheduled every couple of days in case you can't make one day. However, we also have a recording and slides from this session on this site, so you're free to look at those to familiarize yourself and get started right away.</p>
+            <h3 className="faq-question">1. Where do I find the first two assessments?</h3>
+            <p className="faq-answer">Updated info coming soon…</p>
           </div>
           
           <div className="faq-item">
-            <h2 className="faq-question">2. I didn't receive an assessment, do I need to take one?</h2>
-            <p className="faq-answer">No, there is currently no assessment for this project, you can get started familiarizing yourself with the task and working on it immediately.</p>
+            <h3 className="faq-question">2. How long until my first two assessments are graded?</h3>
+            <p className="faq-answer">It can take multiple days for your assessments to be graded. Please be patient and our team will get back to you as soon as possible.</p>
           </div>
           
           <div className="faq-item">
-            <h2 className="faq-question">3. How do I receive my API keys?</h2>
-            <p className="faq-answer">You should receive an email with your OpenAI API key shortly after joining the project. If you haven't received it within a day or two, please reach out to Connor Young on Slack. You will only need the OpenAI key - our infrastructure will allow you to run Anthropic models using only this key.</p>
+            <h3 className="faq-question">3. How long until my Prompt-Preparation submission is reviewed?</h3>
+            <p className="faq-answer">It can take multiple days for your Prompt-Preparation submission to be reviewed. Please be patient and our team will get back to you as soon as possible.
+However, you are encouraged to continue working on and completing additional tasks while you wait, as this helps maintain momentum and ensures you’re ready to proceed as soon as your submission is approved.</p>
           </div>
+
+          {/* Workflow and Sequencing */}
+          <h2 className="faq-section-title">Workflow and Sequencing</h2>
           
           <div className="faq-item">
-            <h2 className="faq-question">4. Why do I not see anything in my Snorkel Expert Platform?</h2>
-            <p className="faq-answer">This project is currently being run entirely outside of the Snorkel Expert Platform. Therefore, you should not and will not see anything related to the project on the platform. Everything will be done through the GitHub repo at this point in time.</p>
-          </div>
-          
-          <div className="faq-item">
-            <h2 className="faq-question">5. How do I get served a task?</h2>
-            <p className="faq-answer">You will not be "served" a task to complete like in other Snorkel projects. You will be ideating and creating the task completely from scratch. Please see the Task Walkthrough videos for more detail on how to do this.</p>
-          </div>
-          
-          <div className="faq-item">
-            <h2 className="faq-question">6. How do I get an idea for my task?</h2>
-            <p className="faq-answer">You can either come up with a task from scratch or take a task idea from our sheet of task ideas, this is up to you. You can also use the task ideas as "inspiration" and come up with a similar or more complex version.</p>
-          </div>
-          
-          <div className="faq-item">
-            <h2 className="faq-question">7. How do I claim an existing task idea from the sheet?</h2>
-            <p className="faq-answer">To claim a task, please DM Connor Young on Slack with the line number of the task that you would like to claim. Please do not request more than 2-3 tasks at once, you will be capped at this until you have completed one or more of the tasks that you have previously requested.</p>
-          </div>
-          
-          <div className="faq-item">
-            <h2 className="faq-question">8. What are the daily Office Hours sessions?</h2>
-            <p className="faq-answer">These are open forums that are entirely for you. You can come and ask any general questions or specific questions about your task. These are not required, but we encourage attending either to ask questions yourself or just to learn from listening to other people.</p>
-          </div>
-          
-          <div className="faq-item">
-            <h2 className="faq-question">9. How do I make a hard task?</h2>
-            <p className="faq-answer">
-              <strong>Important:</strong> Tasks that are not at least "Easy" difficulty rating will NOT be accepted. Here are some suggestions and guidelines to make harder tasks:
-            </p>
-            <ul style={{ marginTop: '0.75rem', paddingLeft: '1.5rem', color: '#64748b' }}>
-              <li style={{ marginBottom: '0.75rem' }}>
-                <strong>Make a debugging-style task:</strong> When an agent has to figure out the root cause of an issue, it inherently requires reasoning.
-              </li>
-              <li style={{ marginBottom: '0.75rem' }}>
-                <strong>Make tasks requiring special/niche knowledge:</strong> Knowledge is publicly available but LLMs have not been well-trained on it due to niche nature. Example: <a href="https://github.com/snorkel-ai/snorkel-tb-tasks/pull/103" target="_blank" rel="noopener noreferrer" style={{ color: '#1e40af', textDecoration: 'none' }}>Blockchains/NFT task</a>
-              </li>
-              <li style={{ marginBottom: '0.75rem' }}>
-                <strong>Use a bespoke rule buried in common rules:</strong> The task.yaml still has to clearly define it, but a bespoke rule seems to confuse an agent. Example: <a href="https://github.com/snorkel-ai/snorkel-tb-tasks/pull/174#discussion_r2497044356" target="_blank" rel="noopener noreferrer" style={{ color: '#1e40af', textDecoration: 'none' }}>Bespoke rule example</a>
-              </li>
-              <li style={{ marginBottom: '0.75rem' }}>
-                <strong>Develop a complex, multi-step task:</strong> Each step has a certain amount of chance that an agent fails, making the overall failure rate higher.
-              </li>
+            <h3 className="faq-question">1. What's the end-to-end workflow?</h3>
+            <ul className="faq-answer-list">
+              <li><strong>Marlin-PR-Selection:</strong> choose a repo and associated PR → submit</li>
+              <li>Wait 30–45 minutes for systems to process your choice (compilation for later use)</li>
+              <li><strong>Marlin-Prompt-Preparation:</strong> answer the structured questions (Context Setting, Task Approach, Prompt Definition)</li>
+              <li>Receive feedback, refine as needed</li>
+              <li>Upon approval, move to the client's platform to perform the actual task</li>
             </ul>
           </div>
+          
+          <div className="faq-item">
+            <h3 className="faq-question">2. Can I skip steps (e.g., jump straight to the client/login)?</h3>
+            <p className="faq-answer">No. Each step is part of one pipeline. You must complete them in sequence to proceed.</p>
+          </div>
+          
+          <div className="faq-item">
+            <h3 className="faq-question">3. Why is there a 30–45 minute wait after PR selection?</h3>
+            <p className="faq-answer">Our systems compile and prepare the repo/PR context for your later use. Do not submit another selection while waiting; the UI may show another selection task, but submitting again will slow you down. If it's been more than 1 hour, ping #ec-marlin-support.</p>
+          </div>
+
+          {/* Marlin-PR Selection */}
+          <h2 className="faq-section-title">Marlin-PR Selection</h2>
+          
+          <div className="faq-item">
+            <h3 className="faq-question">1. What am I selecting in Marlin-PR-Selection?</h3>
+            <p className="faq-answer">You must select one open-source GitHub repository and one associated PR you're confident addressing with the model.</p>
+          </div>
+          
+          <div className="faq-item">
+            <h3 className="faq-question">2. How should I choose a PR?</h3>
+            <p className="faq-answer">Open the repo and PR URLs (copy/paste into your browser) and review code, structure, tests, and discussion.</p>
+          </div>
+          
+          <div className="faq-item">
+            <h3 className="faq-question">3. Can I make multiple PR selections while I wait for the first to be approved?</h3>
+            <p className="faq-answer">It is recommended to limit selections to a maximum of two and to focus on addressing them thoroughly with their designated models.</p>
+          </div>
+
+          {/* Marlin-Prompt-Preparation */}
+          <h2 className="faq-section-title">Marlin-Prompt-Preparation</h2>
+          
+          <div className="faq-item">
+            <h3 className="faq-question">1. Is the prompt I create separate from the PR?</h3>
+            <p className="faq-answer">Yes, they are separate deliverables. Your prompt must be grounded in the selected repo and aligned with your proposed PR. Think of a PR as what changes and your prompt as how to ask the model to produce those changes (files, constraints, tests, acceptance criteria).</p>
+          </div>
+          
+          <div className="faq-item">
+            <h3 className="faq-question">2. How detailed should my answers be?</h3>
+            <p className="faq-answer">Be clear, concrete, and objective. Align edge cases with test cases and make acceptance criteria measurable. Please avoid vague wording.</p>
+          </div>
+          
+          <div className="faq-item">
+            <h3 className="faq-question">3. What's an acceptable prompting style?</h3>
+            <p className="faq-answer">Use an unambiguous, non-adversarial approach that guides the model directly to the PR's solution. Do not use role-based prompting (e.g., "As a software engineer,…").</p>
+          </div>
+          
+          <div className="faq-item">
+            <h3 className="faq-question">4. What makes a strong Prompt?</h3>
+            <p className="faq-answer">Self-contained instructions specifying: targeted files, required constraints, testing expectations, acceptance criteria, and output format (e.g., minimal diffs + notes). Include time estimate and complexity rating.</p>
+          </div>
+
+          {/* Anthropic Platform */}
+          <h2 className="faq-section-title"> Platform</h2>
+          
+          <div className="faq-item">
+            <h3 className="faq-question">1. Should I re-upload the "original" tarball on every subsequent turn?</h3>
+            <p className="faq-answer">It is very important that you <strong>DO NOT</strong> re-upload the "original" tarball on every subsequent turn. When you upload the tarball on each prompt, that unfortunately creates duplicate repos in the context of the prompt and confuses the model with the state of the fixes. Unless confirmed by the project team, do not upload any new files after turn 1.</p>
+          </div>
+
         </div>
       </main>
 
       <footer className="videos-footer">
-        <p>&copy; 2025 Terminus EC Training. All rights reserved.</p>
+        <p>&copy; 2025 Marlin Training. All rights reserved.</p>
       </footer>
     </div>
   );
 }
 
 export default FAQ;
-
