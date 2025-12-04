@@ -313,7 +313,7 @@ function LandingPage({ onNavigate }) {
                       Onboarding Video - check #ec-marlin-support-v2 for the password
                     </h4>
          <ProtectedVideo 
-  src={import.meta.env.BASE_URL + "media/videos/tutorial-one.mp4"}
+  src={"public/media/videos/turorial-one.mp4"}
   password="8bMf%@X+"
 />
                   </div>
